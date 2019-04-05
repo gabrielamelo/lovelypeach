@@ -1,0 +1,635 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+/*	LOVELY PEACH - PROJETO ACADÊMICO
+/*	Site de empresa fíctica criado para compôr
+/*	nota da disciplina de Aplicativos para Web
+/*
+/*	Autora: Gabriela Peixoto de Melo
+/*	RGM: 11181501990
+/*	Data: Abril 2019
+/*
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Normalize 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Geral 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+* {
+	box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+}
+
+.clearfix::after {
+   clear: both;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: #FFFFFF;
+	font-family: "hk_groteskregular", sans-serif;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Topo 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.top-wrap {
+	background: #FBF2F1;
+	display: block;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+}
+
+.top-row {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
+.img-top {
+	display: block;
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.img-top img {
+	   object-fit: cover;
+	-o-object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (max-width: 976px) {
+	.top-wrap {
+		height: auto;
+	}
+
+	.top-row {
+		position: relative;
+	}
+
+	.img-top {
+		margin-top: 50%;
+		height: 500px;
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		top: 50%;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Cabeçalho 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+	top: 7%;
+	left: 7%;
+	max-width: 300px;
+	position: relative;
+}
+
+.logo img {
+	max-width: 300px;
+}
+
+.logo img:hover {
+	transition: 1s ease-in-out;
+	-webkit-transform: rotate(360deg);
+	    -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+h1 {
+	margin: 0;
+}
+
+@media screen and (max-width: 976px) {
+	header {
+		margin: 0 auto;
+		left: 0;
+		top: 10%;
+	}
+
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Menu + Ícones Sociais
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.icones-sociais,
+.menu {
+	color: #FFFFFF;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 1.350em;
+	letter-spacing: .08em;
+	padding: 2em 0;
+	position: absolute;
+	right: 2em;
+	text-transform: uppercase;
+	top: 0;
+}
+
+.icones-sociais ul,
+.menu ul {
+	text-align: right;
+}
+
+.icones-sociais ul li,
+.menu ul li {
+	display: inline;
+	padding: 0 .5em;
+}
+
+.icones-sociais ul li a,
+.menu ul li a {
+	color: #FFFFFF;
+	padding-bottom: .3em;
+	text-decoration: none;
+}
+
+.menu ul li a:hover {
+	border-bottom: 2px solid #FFF;
+}
+
+.icones-sociais {
+	font-family: FontAwesome;
+	right: 17em;
+}
+
+@media screen and (max-width: 976px) {
+	.icones-sociais,
+	.menu {
+		padding: 1em 0;
+		position: relative;
+		text-align: center;
+		right: 0;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.menu,
+	.menu ul, 
+	.icones-sociais ul {
+		padding-left: 1em;
+		text-align: center;
+	}
+
+	.icones-sociais ul li a,
+	.menu ul li a {
+		color: #EF9A9A;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Frases 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.frase-1 {
+	color: #4B4b4b;
+	font-size: 1.6em;
+	letter-spacing: 0.06em;
+	line-height: 1.4em;
+	margin: 8% 0 1em 9%;
+}
+
+.frase-hero {
+	color: #EF9A9A;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 4vw;
+	letter-spacing: 0.1em;
+	padding-left: 1em;
+	text-align: right;
+	text-transform: uppercase;
+	width: 57%;
+	position: relative;
+	z-index: 1000;
+}
+
+.frase-italic {
+	font-family: "hk_groteskbold_italic", sans-serif;
+	font-style: italic;
+}
+
+@media screen and (max-width: 976px) {
+	.frase-1,
+	.frase-hero {
+		text-align: center;
+		margin: 0 auto 1em;
+		width: 100%;
+	}
+
+	.frase-1 {
+		padding-bottom: 1em;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Scroll Down Seta 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.scroll-seta:before {
+	background: #0033EE;
+	content: "";
+	display: block;
+	height: 86vh;
+	margin:  0 0 1.9em 1.5em;
+	width: 1px;
+}
+
+.scroll-seta {
+	color: #0033EE;
+	font-size: 13px;
+	letter-spacing: .1em;
+	line-height: 1.4em;
+	padding: 0 0 1em 2em;
+	position: absolute;
+	text-align: left;
+	text-transform: uppercase;
+	top: 0;
+}
+
+.scroll-seta .fa {
+	display: block;
+	font-size: 450%;
+}
+
+@media screen and (max-width: 976px) {
+	.scroll-seta {
+		display: none;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Grid Produtos
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.grid-wrap {
+	margin: 15em auto;
+	max-width: 85%;
+}
+
+.grid-wrap h2 {
+	color: #0033EE;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 4em;
+	margin-left: .3em;
+	text-transform: uppercase;
+}
+
+.grid-wrap h2:after {
+	content: "~~~~~~~~~";
+	display: block;
+	letter-spacing: -11.2px;
+	padding-top: .4em;
+} 
+
+.grid {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: -webkit-box;
+	display: flex;
+}
+  
+.grid img {
+	   object-fit: cover;
+	-o-object-fit: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+  
+.grid-col {
+	display: block;
+	height: 300px;
+	padding: 1.5em;
+	flex-grow: 1;
+	position: relative;
+}
+  
+.grid-col-2 {
+	flex-grow: 2;
+}
+
+.grid-texto {
+	color: #FFF;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 2em;
+	letter-spacing: .1em;
+	position: absolute;
+	top: .7em;
+	right: .7em;
+	bottom: .7em;
+	left: .7em;
+	padding: 1.5em 0 0 1.5em;
+	text-transform: uppercase;
+	background: rgba(226, 167, 181, .1);
+}
+
+.grid-texto:hover {
+	background: rgba(226, 167, 181, .3);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 976px) {
+	.grid-wrap {
+		margin: 8em auto;
+	}
+
+	.grid {
+		display: block;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Instagram Fotos
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.insta-wrap-out {
+	background :#FBF2F1;
+	padding: 15em 2em 10em 2em;
+}
+
+.insta-wrap {
+	margin: 0 auto;
+	max-width: 85%;
+}
+
+.username {
+	color: #FED766;
+	font-family: "hk_groteskbold_italic", sans-serif;
+	font-size: 4vw;
+	margin-bottom: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.username span {
+	color: #EF9A9A;
+	display: block;
+	font-family: "hk_groteskregular", sans-serif;
+	font-size: 12px;
+	letter-spacing: .08em;
+	padding-bottom: .5em;
+}
+
+.insta-widget {
+	display: block;
+	float: left;
+	position: relative;
+	width: 30%;
+	margin: 0 2% 4.5% 2%;
+}
+
+.insta-widget:nth-child(1),
+.insta-widget:nth-child(4) {
+	margin-left: 0;
+}
+
+.insta-widget:nth-child(3),
+.insta-widget:nth-child(6) {
+	margin-right: 0;
+}
+
+.insta-widget img {
+	display: block;
+	width: 100%;
+}
+
+.insta-widget a {
+	border-radius: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.insta-widget .insta-likes {
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+	align-items: center;
+	bottom: 0;
+	color: #EF9A9A;
+	font-size: 5em;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+.insta-widget .insta-likes:hover {
+	background: #FFFFFF;
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 976px) {
+	.insta-wrap-out {
+		padding: 8em 2em 6em 2em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.insta-widget .insta-likes:hover {
+		opacity: 0;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Footer
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.footer-wrap {
+	color: #EF9A9A;
+	background: #FFF;
+}
+
+.titulo-fot, 
+.copyleft {
+	display: block;
+	float: left;
+	font-family: "hk_groteskbold_italic", sans-serif;
+	font-size: 3em;
+	padding: 1.3em 2em;
+	text-transform: uppercase;
+	width: 50%;
+}
+
+.copyleft {
+	text-align: right;
+}
+
+@media screen and (max-width: 976px) {
+	.titulo-fot, 
+	.copyleft {
+		display: block;
+		float: none;
+		font-size: 1.5em;
+		margin: 0 auto;
+		padding: .7em 1em;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Página Sobre
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.sobre-wrap {
+	margin: 15em auto;
+	max-width: 1400px;
+	width: 80%;
+}
+
+.sobre-wrap h2 {
+	color: #0033EE;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 4em;
+	margin-left: .3em;
+	text-transform: uppercase;
+}
+
+.sobre-texto p {
+	font-size: 1.6em;
+	letter-spacing: .04em;
+	line-height: 1.9em;
+	max-width: 60%;
+}
+
+.sobre-wrap .img-texto img {
+	margin: 1em 0;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 680px) {
+	.sobre-texto p {
+		max-width: 85%;
+	}
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*   Página Contato
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.contato-wrap {
+	margin: 15em auto;
+	max-width: 800px;
+	width: 80%;
+}
+
+.contato-wrap h2 {
+	color: #0033EE;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 4em;
+	margin-left: .3em;
+	text-transform: uppercase;
+}
+
+.contato-wrap h3 {
+	color: #EF9A9A;
+	font-size: 12px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+input[type=text], select, textarea {
+	border: 0;
+	border-bottom: 1px solid #EF9A9A;
+	font-size: 1.5em;
+	margin-top: .8em; 
+	margin-bottom: 1em;
+	padding: 1.5em 0 .5em;
+	resize: vertical;
+	text-transform: uppercase;
+	width: 100%;
+}
+  
+input[type=submit] {
+	background-color: #F6EE78;
+	border: 0;
+	border-radius: 100%;
+	color: #EF9A9A;
+	cursor: pointer;
+	font-family: "hk_groteskbold", sans-serif;
+	font-size: 2em;
+	height: 120px;
+	margin: 0 auto;
+	padding: 1em;
+	text-transform: uppercase;
+	width: 120px;
+}
+  
+input[type=submit]:hover {
+	background-color: #EF9A9A;
+	color: #F6EE78;
+}
+
+
+
+/* --- FIM CSS --- */

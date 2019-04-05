@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lovely Peach &#8212; Empresa Fícticia de Cosméticos</title>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/png" href="imagens/favicon.png"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		
+		<!-- CSS -->
+		<link rel='stylesheet' href='estilo.css'>
+		
+		<!-- Fontes -->
+		<link rel='stylesheet' href='fonts.css'>
+		<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/coffeescript.js" ></script>
+	</head>
+	<body>
+
+		<div class='top-wrap'>
+
+			<div class='top-row fixed'>
+				<div class='icones-sociais'>
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				<nav class="menu">
+					<ul>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li> . </li>
+						<li><a href="contato.html">Contato<a/></li>
+					</ul>
+				</nav>
+						
+				<header>
+					<h1>
+						<a href="index.html">
+							<div class='logo'>
+								<img src="imagens/logoLP.png" />
+							</div>
+						</a>
+					</h1>
+				</header>
+			
+
+                <div class='frase-1'>
+                        Assim como todo o conteúdo desse site, <br /> o formulário de contato abaixo também é fictício =p
+                </div>
+
+				<div class="frase-hero">
+					Manda um sinal de fumaça! <div class='frase-italic'> Ou só um Alô.</div>
+				</div>
+					
+				<div class='scroll-seta'>
+					Continue <br/> para saber mais
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div class='img-top'>
+				<img src="imagens/contato.jpg" />
+			</div>
+
+		</div>
+
+		<main class="main">
+
+			<div class='contato-wrap'>
+				<h2>
+					<i class="fa fa-diamond" aria-hidden="true"></i> Pra falar com a gente <i class="fa fa-diamond" aria-hidden="true"></i> 
+				</h2>
+				<h3>
+					Dúvidas & Sugestões? Use o formulário abaixo:
+				</h3>
+				<div class="container">
+					<form action="post">
+						<input type="text" id="fname" name="firstname" placeholder="Nome">
+						<input type="text" id="lname" name="lastname" placeholder="Sobrenome">
+						<input type="text" id="lemail" name="email" placeholder="Email@email.com">
+						<textarea id="subject" name="subject" placeholder="Digite sua mensagem" style="height: 150px"></textarea>
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+			</div>
+
+
+			<div class='insta-wrap-out'>
+				<div class='username'>
+					<span>get social. siga a gente no instagram</span>
+					<i class="fa fa-bolt" aria-hidden="true"></i> @xlovelypeachx <i class="fa fa-bolt" aria-hidden="true"></i>
+				</div>
+				<div class='insta-wrap'>
+					<div id='instagram-wrapper' class='clearfix'>
+						<div id='instafeed' class="instafeed-w clearfix">
+						</div>
+							<script>
+							//<![CDATA[
+								var userFeed = new Instafeed({
+									userId: "5425139254",
+									accessToken: "5425139254.1677ed0.9ff1a093fa664a7188738d8d8bb8a4f9",
+									get: "user",
+									limit: "6",
+									resolution: "standard_resolution",
+									template: '<div class="insta-widget" href="{{link}}" target="_blank"><img src="https://4.bp.blogspot.com/-AAm8PY3cXo0/VuhmwWgl8qI/AAAAAAAAWc8/30NCuYaT2B4ssffctToAJIAHL4_mnS9vQ/s1600/187tdf.png"/><a href="{{link}}" target="_blank" style="background-image: url({{image}});"><span class="insta-likes"><i class="fa fa-instagram" aria-hidden="true"></i></span></a></div>'
+								});
+								userFeed.run();
+							//]]>
+							</script>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<footer class='footer-wrap'>
+			<div class='footer'>
+				<div class='titulo-fot'>Peach Skin, please!</div>
+				<div class='copyleft'>© 2019 . Lovely Peach Beauty</div>
+			</div>
+		</footer>
+	</body>
+</html>
